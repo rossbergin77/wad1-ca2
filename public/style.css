@@ -1,0 +1,66 @@
+/* Box sizing and font settings for the entire page */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  
+}
+
+/* Inherit box-sizing for all elements and pseudo-elements */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Main body styling with purple background */
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: #b48dd8;
+}
+
+/* Image sizing - 50% of container */
+img{
+  width:50%;
+  height: 50%;
+}
+
+/* Content segment styling with light purple background */
+.ui.segment {
+  background-color: #F0D9FF;
+  border-radius: 0.5em;
+  padding: 2em;
+  margin-bottom: 2em;
+}
+
+/* Navigation menu styling */
+.ui.menu {
+  color: #7F7C82;
+  background-color: #F0D9FF;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+/* Default link color in black */
+a {
+  color:black;
+}
+
+/* Links turn dark purple on hover */
+a:hover{
+  color: #490c79;
+}
+
+/* Dashboard and about menu links hover effect */
+div a#dashboard:hover, div a#about:hover{
+  color: #490c79;
+}
+
+/* Table header background color matching theme */
+table.ui.unstackable.striped.table tr th{
+  background-color:#b48dd8;
+}
+
+/* Table cell background color */
+table.ui.unstackable.striped.table tr td{
+  background-color:#c5a0e8;
+}

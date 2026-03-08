@@ -1,0 +1,29 @@
+{{#if singleCollection.games}}
+
+  <table class="ui unstackable striped table">
+    <thead>
+      <tr>
+        <th>Game</th>
+        <th>Percentage</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each singleCollection.games}}
+        <tr>
+          <td>
+            {{title}}
+          </td>
+          <td>
+            {{percentage}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  {{else}}
+    <h3 class="ui message">
+      Empty collection!
+    </h3>
+
+{{/if}}

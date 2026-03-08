@@ -1,0 +1,14 @@
+{
+  "info": {
+    "appTitle": "Game Completion App",
+    "version": "1.0.0",
+    "creators": [
+      {
+        "name": "Ross Bergin",
+        "role": "Web Developer"
+      }
+    ],
+    "location": "Waterford",
+    "email": "john.doe@example.com"
+  } 
+}

@@ -1,0 +1,36 @@
+<!-- Navigation menu with dashboard highlight -->
+{{> menu id="dashboard"}}
+
+<!-- Main dashboard section displaying all collections -->
+<section class="ui left aligned middle aligned segment">
+  
+  <h2>Completionist App Dashboard</h2>
+  
+  <!-- Message when no collections exist -->
+  {{#unless collections}}
+    <h3 class="ui message">
+      Start adding your collections!
+    </h3>
+  {{/unless}}
+
+  <!-- Loop through and display each collection -->
+  {{#each collections}}
+    <section class="ui left aligned middle aligned segment">
+
+      <!-- Collection title -->
+      <h3 class="ui header">
+        {{title}}
+      </h3>
+      <!-- Show game count or empty message -->
+      {{#if games}}
+      <p>Total Games: {{games.length}}</p>
+      {{else}}
+      <p>Empty Collection!</p>
+      {{/if}}
+      <!-- Link to view the full collection -->
+      <a href="/collection/{{id}}"> <i class = "open folder black outline icon"></i></a>
+
+    </section>
+  {{/each}}
+
+</section>
