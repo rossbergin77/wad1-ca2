@@ -3,21 +3,27 @@
 // Import logging utility and app information store
 import logger from "../utils/logger.js";
 import appStore from "../models/app-store.js";
+import accounts from './accounts.js';
+
 
 // Controller for the home/start page
 const start = {
-  createView(request, response) {
+ createView(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
     logger.info("Start page loading!");
     
-    // Prepare data for the start page view
-    const viewData = {
-      title: "Game Completion App",
-      info: appStore.getAppInfo()
-    };
-    
-    // Render the start template with data
-    response.render('start', viewData);   
-  },
+    if (loggedInUser) {
+      const viewData = {
+        title: "Welcome to the Playlist app!",
+        info: appStore.getAppInfo(),
+        fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+        picture: loggedInUser.picture,
+      };
+      response.render('start', viewData);
+    }
+    else response.redirect('/');    
+},
+
 };
 
 export default start;

@@ -1,0 +1,24 @@
+<tr id="game{{@index}}">
+
+
+  <td>
+    {{title}}
+  </td>
+  <td>
+    {{percentage}}
+  </td>
+
+  <td class="center aligned">
+<button title="Edit game" class = "editSubmit" id="showEdit{{@index}}">
+    <i class="ui pencil icon"></i>
+</button>
+
+
+  </td>
+  <td class="center aligned">
+    <a href="/collection/{{collectionId}}/deletegame/{{id}}" 
+	   title="Delete game">
+      <i class="ui black trash icon"></i>
+    </a>
+  </td>
+</tr>

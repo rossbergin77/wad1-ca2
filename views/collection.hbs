@@ -1,12 +1,22 @@
-<!-- Navigation menu -->
+
 {{> menu}}
 
-<!-- Single collection view with game list -->
-<section class="ui center aligned middle aligned scrolling segment">
-  <!-- Collection title -->
-  <h2 class="ui header">
-    {{singleCollection.title}}
-  </h2>
-  <!-- Display games table for this collection -->
-  {{> listgames}}
-</section>
+{{#with singleCollection}}
+
+  <section class="ui center aligned middle aligned scrolling segment">
+
+    <h2 class="ui header">
+      {{title}}
+    </h2>
+
+    {{> listgames}}
+
+  </section>
+
+  <section class="ui center aligned middle aligned segment">
+
+    {{> addgame}}
+
+  </section>
+
+{{/with}}

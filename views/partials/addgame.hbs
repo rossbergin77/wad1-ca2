@@ -1,0 +1,17 @@
+<form class="ui stacked segment form" action="/collection/{{id}}/addgame" method="POST">
+  <div class="two fields">
+    <div class="field">
+      <label>Game</label>
+      <input type="text" name="title" autofocus required title = "Please include a valid Game Title"
+	  placeholder="Title">
+    </div>
+    <div class="field">
+      <label>Percentage</label>
+      <input type="text" name="percentage" required title = "Please include a valid Percentage"
+	  placeholder="Percentage"  >
+    </div>
+  </div>
+  <button class="ui blue submit button">Add Game</button>
+</form>
+
+
