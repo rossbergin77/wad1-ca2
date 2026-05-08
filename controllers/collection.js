@@ -50,7 +50,7 @@ updateGame(request, response) {
     const updatedGame = {
       id: gameId,
       title: request.body.title,
-      artist: request.body.percentage
+      percentage: request.body.percentage
     };
     collectionStore.editGame(collectionId, gameId, updatedGame);
     response.redirect('/collection/' + collectionId);
