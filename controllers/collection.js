@@ -4,6 +4,7 @@
 import logger from '../utils/logger.js';
 import collectionStore from '../models/collection-store.js';
 import { v4 as uuidv4 } from 'uuid';
+import accounts from './accounts.js';
 
 
 // Controller for viewing a single game collection
