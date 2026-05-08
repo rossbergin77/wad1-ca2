@@ -26,7 +26,7 @@ addGame(id, game) {
 },
   async addCollection(collection, file, response) {
     try {
-      playlist.picture = await this.store.addToCloudinary(file);
+      collection.picture = await this.store.addToCloudinary(file);
       this.store.addCollection(this.collection, collection);
       response();
     } catch (error) {
