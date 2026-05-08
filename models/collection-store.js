@@ -24,13 +24,13 @@ const collectionStore = {
 addGame(id, game) {
     this.store.addItem(this.collection, id, this.array, game);
 },
-  async addPlaylist(playlist, file, response) {
+  async addCollection(collection, file, response) {
     try {
       playlist.picture = await this.store.addToCloudinary(file);
-      this.store.addCollection(this.collection, playlist);
+      this.store.addCollection(this.collection, collection);
       response();
     } catch (error) {
-      logger.error("Error processing playlist:", error);
+      logger.error("Error processing collection:", error);
       response(error);
     }
   },
